@@ -1,0 +1,221 @@
+[gd_scene load_steps=2 format=3 uid="uid://teacher_select"]
+
+[ext_resource type="Script" path="res://scripts/TeacherSelect.gd" id="1"]
+
+[node name="TeacherSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.039, 0.055, 0.078, 1)
+
+[node name="MainLayout" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60
+offset_top = 30
+offset_right = -60
+offset_bottom = -30
+theme_override_constants/separation = 0
+
+[node name="TopBar" type="HBoxContainer" parent="MainLayout"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 36)
+theme_override_constants/separation = 16
+
+[node name="BtnBack" type="Button" parent="MainLayout/TopBar"]
+layout_mode = 2
+custom_minimum_size = Vector2(90, 32)
+size_flags_vertical = 4
+text = "← vissza"
+
+[node name="TitleLabel" type="Label" parent="MainLayout/TopBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "// TANÁRVÁLASZTÁS"
+theme_override_font_sizes/font_size = 20
+theme_override_colors/font_color = Color(0.35, 0.47, 0.60, 1)
+
+[node name="Divider" type="HSeparator" parent="MainLayout"]
+layout_mode = 2
+
+[node name="SubLabel" type="Label" parent="MainLayout"]
+layout_mode = 2
+text = "Válassz egy tanárt. A döntés meghatározza a route-ot, a mechanikát és az összes lehetséges endinget."
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.35, 0.47, 0.60, 1)
+
+[node name="Spacer0" type="Control" parent="MainLayout"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 12)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MainLayout"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBox" type="VBoxContainer" parent="MainLayout/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 14
+
+[node name="CardBalazs" type="Panel" parent="MainLayout/ScrollContainer/VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 130)
+
+[node name="AccentBar" type="ColorRect" parent="MainLayout/ScrollContainer/VBox/CardBalazs"]
+layout_mode = 1
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+offset_right = 4
+color = Color(0.0, 1.0, 0.53, 1)
+
+[node name="Content" type="VBoxContainer" parent="MainLayout/ScrollContainer/VBox/CardBalazs"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20
+offset_top = 14
+offset_right = -16
+offset_bottom = -14
+theme_override_constants/separation = 6
+
+[node name="RouteLabel" type="Label" parent="MainLayout/ScrollContainer/VBox/CardBalazs/Content"]
+layout_mode = 2
+text = "Route 1  ·  Patch Notes & Check Engine"
+theme_override_font_sizes/font_size = 10
+theme_override_colors/font_color = Color(0.35, 0.47, 0.60, 1)
+
+[node name="TeacherName" type="Label" parent="MainLayout/ScrollContainer/VBox/CardBalazs/Content"]
+layout_mode = 2
+text = "Hujbert Balázs"
+theme_override_font_sizes/font_size = 26
+theme_override_colors/font_color = Color(0.0, 1.0, 0.53, 1)
+
+[node name="Desc" type="Label" parent="MainLayout/ScrollContainer/VBox/CardBalazs/Content"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Gamer tanár bajban. PHP dolgozat, LoL-ping, és valami nagyon rosszat csináltak a Fábiával."
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.6, 0.7, 0.8, 1)
+
+[node name="BtnSelect" type="Button" parent="MainLayout/ScrollContainer/VBox/CardBalazs/Content"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 30)
+text = "Route indítása  →"
+
+[node name="CardAdam" type="Panel" parent="MainLayout/ScrollContainer/VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 130)
+
+[node name="AccentBar" type="ColorRect" parent="MainLayout/ScrollContainer/VBox/CardAdam"]
+layout_mode = 1
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+offset_right = 4
+color = Color(0.0, 0.67, 1.0, 1)
+
+[node name="Content" type="VBoxContainer" parent="MainLayout/ScrollContainer/VBox/CardAdam"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20
+offset_top = 14
+offset_right = -16
+offset_bottom = -14
+theme_override_constants/separation = 6
+
+[node name="RouteLabel" type="Label" parent="MainLayout/ScrollContainer/VBox/CardAdam/Content"]
+layout_mode = 2
+text = "Route 2  ·  Root Access Denied"
+theme_override_font_sizes/font_size = 10
+theme_override_colors/font_color = Color(0.35, 0.47, 0.60, 1)
+
+[node name="TeacherName" type="Label" parent="MainLayout/ScrollContainer/VBox/CardAdam/Content"]
+layout_mode = 2
+text = "Nagy Ádám"
+theme_override_font_sizes/font_size = 26
+theme_override_colors/font_color = Color(0.0, 0.67, 1.0, 1)
+
+[node name="Desc" type="Label" parent="MainLayout/ScrollContainer/VBox/CardAdam/Content"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Az iskola hálózata összeomlott. Valaki gyanús linkre kattintott. Ádám tudja ki volt."
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.6, 0.7, 0.8, 1)
+
+[node name="BtnSelect" type="Button" parent="MainLayout/ScrollContainer/VBox/CardAdam/Content"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 30)
+text = "Route indítása  →"
+
+[node name="CardPunch" type="Panel" parent="MainLayout/ScrollContainer/VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 130)
+
+[node name="AccentBar" type="ColorRect" parent="MainLayout/ScrollContainer/VBox/CardPunch"]
+layout_mode = 1
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+offset_right = 4
+color = Color(1.0, 0.53, 0.0, 1)
+
+[node name="Content" type="VBoxContainer" parent="MainLayout/ScrollContainer/VBox/CardPunch"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20
+offset_top = 14
+offset_right = -16
+offset_bottom = -14
+theme_override_constants/separation = 6
+
+[node name="RouteLabel" type="Label" parent="MainLayout/ScrollContainer/VBox/CardPunch/Content"]
+layout_mode = 2
+text = "Route 3  ·  Ofő Mode: Critical"
+theme_override_font_sizes/font_size = 10
+theme_override_colors/font_color = Color(0.35, 0.47, 0.60, 1)
+
+[node name="TeacherName" type="Label" parent="MainLayout/ScrollContainer/VBox/CardPunch/Content"]
+layout_mode = 2
+text = "Punch Dávid"
+theme_override_font_sizes/font_size = 26
+theme_override_colors/font_color = Color(1.0, 0.53, 0.0, 1)
+
+[node name="Desc" type="Label" parent="MainLayout/ScrollContainer/VBox/CardPunch/Content"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Három osztály, négy szülői panasz, nulla türelem. Az admin rendszer megint nem működik."
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.6, 0.7, 0.8, 1)
+
+[node name="BtnSelect" type="Button" parent="MainLayout/ScrollContainer/VBox/CardPunch/Content"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 30)
+text = "Route indítása  →"
+
+[node name="BottomSpacer" type="Control" parent="MainLayout/ScrollContainer/VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 20)
